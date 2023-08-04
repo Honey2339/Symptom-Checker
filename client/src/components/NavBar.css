@@ -6,19 +6,23 @@ body {
 }
 .nav-component {
   font-family: "Poppins", sans-serif;
+  position: sticky;
   font-size: 16px;
   display: flex;
   align-items: center;
-  background-color: #070d17;
+  background-color: white;
   height: 50px;
   max-height: 50px;
   justify-content: flex-end;
   gap: 90px;
   text-decoration: none !important;
-  color: white;
+  border-bottom: 2px solid black;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.4);
+  color: black;
 }
 .nav-component h3 {
-  font-weight: 450;
+  cursor: pointer;
+  font-weight: 650;
   margin-right: 150px;
 }
 .nav-component a {
@@ -34,7 +38,7 @@ body {
   bottom: -2px;
   width: 100%;
   height: 2px;
-  background: white;
+  background: black;
   transform: scaleX(0);
   transform-origin: left;
   transition: transform 0.3s ease-in-out;

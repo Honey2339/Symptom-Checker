@@ -1,0 +1,15 @@
+.cardbody-container {
+  font-family: "Poppins", sans-serif;
+  transition: transform 0.3s ease;
+}
+.anchor {
+  text-decoration: none;
+  color: white;
+}
+.cardbody-container:hover {
+  transform: scale(1.05);
+}
+.icon {
+  stroke: aliceblue;
+  stroke-width: 1.5px;
+}

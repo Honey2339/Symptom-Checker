@@ -3,6 +3,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom"
 import Home from "./components/Home"
 import Checker from "./components/Checker"
 import NavBar from "./components/NavBar"
+import About from "./components/About"
 
 function RoutesComponent() {
   return (
@@ -12,6 +13,7 @@ function RoutesComponent() {
         <Routes>
           <Route exact path="/" element={<Home />}></Route>
           <Route path="/checker" element={<Checker />}></Route>
+          <Route path="/about" element={<About />}></Route>
         </Routes>
       </BrowserRouter>
     </div>

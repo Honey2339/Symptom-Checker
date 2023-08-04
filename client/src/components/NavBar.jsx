@@ -16,7 +16,11 @@ function NavBar() {
             Checker
           </Link>
         </h3>
-        <h3>About</h3>
+        <h3>
+          <Link to="/about" className="home-btn">
+            About
+          </Link>
+        </h3>
       </div>
     </div>
   )
