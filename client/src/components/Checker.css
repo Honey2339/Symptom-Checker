@@ -7,3 +7,13 @@
 .text-area {
   color: white;
 }
+.full-body {
+  position: absolute;
+  left: 400px;
+  bottom: -90px;
+  height: 400px;
+}
+.layers:hover {
+  cursor: pointer;
+  fill: black;
+}
