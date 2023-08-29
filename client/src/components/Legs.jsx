@@ -63,9 +63,9 @@ function InitialStage() {
   return (
     <>
       <Box mt="100px" ml="40px" h="50vh">
-        <Text fontWeight="semibold" mb="40px">
+        {/* <Text fontWeight="semibold" mb="40px">
           Seems like you have head related problem
-        </Text>
+        </Text> */}
         <FormControl>
           <FormLabel>Tell us what are u facing</FormLabel>
           <Select

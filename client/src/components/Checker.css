@@ -13,7 +13,7 @@
   bottom: -90px;
   height: 400px;
 }
-.layers:hover {
+.layerss:hover {
   cursor: pointer;
-  fill: black;
+  fill: rgb(64, 42, 42);
 }
