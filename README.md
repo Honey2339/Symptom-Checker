@@ -9,3 +9,7 @@ Project Name:- Symptom Checker
 Problem Statement of Our project:
 A web application that allows users to enter symptoms and get  a list of potential conditions,along with basic information on each.
 With the use of NIS/WebMD free API support,We get the required information...
+
+PROJECT DONNE BY:-
+1)PRASOON KUMAR
+2)SOMA AKASH
