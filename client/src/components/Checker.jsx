@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react"
+import React, { useState, useEffect } from "react";
 import {
   Box,
   ChakraProvider,
@@ -20,42 +20,42 @@ import {
   RadioGroup,
   NumberInput,
   NumberInputField,
-} from "@chakra-ui/react"
-import { SmallAddIcon, ArrowDownIcon } from "@chakra-ui/icons"
-import "./Checker.css"
-import { motion } from "framer-motion"
-import { Link } from "react-router-dom"
+} from "@chakra-ui/react";
+import { SmallAddIcon, ArrowDownIcon } from "@chakra-ui/icons";
+import "./Checker.css";
+import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
-delete theme.styles.global
+delete theme.styles.global;
 
 function InitialForm({ onSubmit }) {
-  const [name, setName] = useState("")
-  const [password, setPassword] = useState("")
-  const [passwordError, setPasswordError] = useState("")
-  const [nameError, setNameError] = useState("")
+  const [name, setName] = useState("");
+  const [password, setPassword] = useState("");
+  const [passwordError, setPasswordError] = useState("");
+  const [nameError, setNameError] = useState("");
 
   const handleName = (e) => {
-    setName(e.target.value)
-    setNameError("")
-  }
+    setName(e.target.value);
+    setNameError("");
+  };
   const handlePassword = (e) => {
-    setPassword(e.target.value)
-    setPasswordError("")
-  }
+    setPassword(e.target.value);
+    setPasswordError("");
+  };
 
   const handleSubmit = () => {
     if (name.trim() === "") {
-      setNameError("Name Is Required")
+      setNameError("Name Is Required");
     } else if (password.trim() === "") {
-      setPasswordError("Password Is Required")
+      setPasswordError("Password Is Required");
     } else {
-      onSubmit()
+      onSubmit();
     }
-  }
+  };
 
   return (
     <FormControl ml="50px" mt="80px" isRequired onSubmit={onSubmit}>
-      <FormLabel>Name</FormLabel>
+      <FormLabel>Full Name</FormLabel>
       <Input
         maxWidth="140px"
         type="text"
@@ -92,29 +92,29 @@ function InitialForm({ onSubmit }) {
         Submit
       </Button>
     </FormControl>
-  )
+  );
 }
 
 function AfterSubmissionContent({ onSubmit }) {
-  const [isLoading, setIsLoading] = useState(false)
-  const [conditions, setConditions] = useState(null)
+  const [isLoading, setIsLoading] = useState(false);
+  const [conditions, setConditions] = useState(null);
 
-  const [show, setShow] = useState(false)
+  const [show, setShow] = useState(false);
 
-  const [age, setAge] = useState("")
-  const [errorAge, setErrorAge] = useState("")
+  const [age, setAge] = useState("");
+  const [errorAge, setErrorAge] = useState("");
 
   const handleAge = (e) => {
-    setAge(e.target.value)
-    setErrorAge("")
-  }
+    setAge(e.target.value);
+    setErrorAge("");
+  };
   const handleSecondSubmit = () => {
     if (age.includes() < 0) {
-      setErrorAge("This Field is required")
+      setErrorAge("This Field is required");
     } else {
-      setShow(true)
+      setShow(true);
     }
-  }
+  };
 
   return (
     <>
@@ -251,15 +251,15 @@ function AfterSubmissionContent({ onSubmit }) {
         </FormControl>
       </Box>
     </>
-  )
+  );
 }
 
 function Checker() {
-  const [firstShow, setFirstShow] = useState(true)
+  const [firstShow, setFirstShow] = useState(true);
 
   const handleInitialFormSubmit = () => {
-    setFirstShow(false)
-  }
+    setFirstShow(false);
+  };
 
   return (
     <ChakraProvider theme={theme} resetCSS={false}>
@@ -308,7 +308,7 @@ function Checker() {
         </Box>
       </motion.div>
     </ChakraProvider>
-  )
+  );
 }
 
-export default Checker
+export default Checker;

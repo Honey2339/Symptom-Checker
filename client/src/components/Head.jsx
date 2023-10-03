@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react"
+import React, { useState, useEffect } from "react";
 import {
   Box,
   ChakraProvider,
@@ -20,45 +20,47 @@ import {
   RadioGroup,
   NumberInput,
   NumberInputField,
-} from "@chakra-ui/react"
-import { motion } from "framer-motion"
+} from "@chakra-ui/react";
+import { motion } from "framer-motion";
 
 function InitialStage() {
-  const [isLoading, setIsLoading] = useState(false)
-  const [conditions, setConditions] = useState(null)
-  const [show, setShow] = useState(false)
-  const [selectedCondition, setSelectedCondition] = useState("")
+  const [isLoading, setIsLoading] = useState(false);
+  const [conditions, setConditions] = useState(null);
+  const [show, setShow] = useState(false);
+  const [selectedCondition, setSelectedCondition] = useState("");
+  const [showFeedback, setShowFeedback] = useState(false);
 
   function handleSubmit() {
-    setShow(true)
+    setShow(true);
+    setShowFeedback(true);
   }
 
   useEffect(() => {
-    const corsProxyUrl = "https://cors-anywhere.herokuapp.com/"
-    const apiUrl = `https://api.nhs.uk/conditions/${selectedCondition}`
+    const corsProxyUrl = "https://cors-anywhere.herokuapp.com/";
+    const apiUrl = `https://api.nhs.uk/conditions/${selectedCondition}`;
     const fetchConditions = async () => {
       if (selectedCondition !== "") {
-        setIsLoading(true)
+        setIsLoading(true);
         try {
           const response = await fetch(corsProxyUrl + apiUrl, {
             headers: {
               "subscription-key": "b6a8d37dfb6d442a9e3e293708d42735",
             },
-          })
+          });
           if (!response.ok) {
-            throw new Error("Request failed with status :" + response.status)
+            throw new Error("Request failed with status :" + response.status);
           }
-          const data = await response.json()
-          setConditions(data)
+          const data = await response.json();
+          setConditions(data);
         } catch (error) {
-          console.error("Error fetching condition", error)
+          console.error("Error fetching condition", error);
         } finally {
-          setIsLoading(false)
+          setIsLoading(false);
         }
       }
-    }
-    fetchConditions()
-  }, [selectedCondition])
+    };
+    fetchConditions();
+  }, [selectedCondition]);
 
   return (
     <>
@@ -94,6 +96,11 @@ function InitialStage() {
             Next
           </Button>
         </FormControl>
+        {showFeedback ? (
+          <a href="/feedback">
+            <h1 className="feedback">Feedback</h1>
+          </a>
+        ) : null}
       </Box>
       {isLoading && show ? (
         <Center>
@@ -144,11 +151,11 @@ function InitialStage() {
         </div>
       )}
     </>
-  )
+  );
 }
 
 function Head() {
-  const [firstShow, setFirstShow] = useState(true)
+  const [firstShow, setFirstShow] = useState(true);
 
   return (
     <ChakraProvider theme={theme} resetCSS={false}>
@@ -193,7 +200,7 @@ function Head() {
         </Box>
       </motion.div>
     </ChakraProvider>
-  )
+  );
 }
 
-export default Head
+export default Head;

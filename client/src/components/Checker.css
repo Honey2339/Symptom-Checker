@@ -17,3 +17,42 @@
   cursor: pointer;
   fill: rgb(64, 42, 42);
 }
+.feedback {
+  margin-top: 400px;
+  font-size: small;
+}
+.feedback-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: "Poppins", sans-serif;
+  margin-top: 100px;
+}
+.feedback-box {
+  border: 1px solid black;
+  padding: 40px 40px;
+}
+.btn {
+  font-size: large;
+  cursor: pointer;
+  margin-top: 10px;
+  font-family: "Poppins", sans-serif;
+  color: white;
+  background-color: black;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border: 1px solid white;
+  border-radius: 5px;
+}
+.btn:hover {
+  transition: all;
+  background-color: white;
+  color: black;
+  border: 1px solid black;
+}
+.feedback-text {
+  text-align: center;
+}

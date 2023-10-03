@@ -1,6 +1,6 @@
-import React from "react"
-import { Link } from "react-router-dom"
-import "./NavBar.css"
+import React from "react";
+import { Link } from "react-router-dom";
+import "./NavBar.css";
 
 function NavBar() {
   return (
@@ -16,6 +16,11 @@ function NavBar() {
             Checker
           </Link>
         </h3>
+        {/* <h3>
+          <Link to="/feedback" className="home-btn">
+            FeedBack
+          </Link>
+        </h3> */}
         <h3>
           <Link to="/about" className="home-btn">
             About
@@ -23,7 +28,7 @@ function NavBar() {
         </h3>
       </div>
     </div>
-  )
+  );
 }
 
-export default NavBar
+export default NavBar;

@@ -14,7 +14,7 @@ body {
   height: 50px;
   max-height: 50px;
   justify-content: flex-end;
-  gap: 90px;
+  gap: 40px;
   text-decoration: none !important;
   border-bottom: 2px solid black;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.4);
